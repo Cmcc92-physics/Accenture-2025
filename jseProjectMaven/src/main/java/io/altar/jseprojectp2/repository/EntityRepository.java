@@ -2,7 +2,6 @@ package io.altar.jseprojectp2.repository;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,7 +16,7 @@ public abstract class EntityRepository<T extends Entity_> {
 	private int currentId = 0;
 
 	// Criar (db.put)
-	public int add(T e) {
+	public int addEntity(T e) {
 		e.setEntityId(currentId);
 		db.put(currentId, e);
 		return currentId++;
@@ -32,20 +31,20 @@ public abstract class EntityRepository<T extends Entity_> {
 		return db.keySet();
 	}
 	
-	public T getById(int id) {
+	public T getEntity(int id) {
 		return db.get(id);
 	}
 
 	// Edit (db.put)
-	public void edit(T e) {
+	public void editEntity(T e) {
 		db.put(e.getEntityId(), e);
 		System.out.println("Entidade atualizada com sucesso!");
 	}
 
 	// Remove an item (db.remove)
-	public void remove(int id) {
+	public void removeEntity(int id) {
 		db.remove(id);
-		System.out.println("Entidade removida com sucesso");
+		System.out.println("Entidade removida com sucesso!");
 	}
 
 	// Condition to verify if the Id is empty
@@ -56,9 +55,5 @@ public abstract class EntityRepository<T extends Entity_> {
 	public int size() {
 		return db.size();
 	}
-
-	public List<Integer> getShelfIdsByProductId(Integer productId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }

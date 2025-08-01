@@ -21,14 +21,19 @@ public class Product extends Entity_ {
 		this.iva = iva;
 		this.publicPrice = publicPrice;
 	}
-
 	
-	public Product() {
-		// TODO Auto-generated constructor stub
+	public Product(String productName, double unitDiscount, double iva, double publicPrice) {
+
+		this.productName = productName;
+		this.unitDiscount = unitDiscount;
+		this.iva = iva;
+		this.publicPrice = publicPrice;
 	}
 
+	public Product() {
+	}
 
-	public String getProducNamet() {
+	public String getProducName() {
 		return productName;
 	}
 
@@ -57,6 +62,15 @@ public class Product extends Entity_ {
 	}
 
 	public void setIva(double iva) {
+		switch ((int) iva) {
+		case 6:
+		case 13:
+		case 23:
+			break;
+
+		default:
+			throw new IllegalArgumentException();
+		}
 		this.iva = iva;
 	}
 
@@ -70,15 +84,7 @@ public class Product extends Entity_ {
 
 	@Override
 	public String toString() {
-		return "Product [productId=" + this.getEntityId() + ", productName=" + productName + ", shelfIds=" + shelfIds
-				+ ", unitDiscount=" + unitDiscount + ", iva=" + iva + ", publicPrice=" + publicPrice + "]";
+		return "Product [productId=" + this.getEntityId() + ", productName=" + productName + ", unitDiscount=" + unitDiscount + ", iva=" + iva + ", publicPrice=" + publicPrice + "]";
 	}
 
-
-	public Object getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
 }
