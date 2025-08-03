@@ -34,13 +34,13 @@ public class UpdateProduct extends State {
 
 			updateProduct.setShelfList(ids);
 
-			Double newUnitDiscount = scanner.getDouble("Inserir o novo valor unitário de desconto:");
+			Double newUnitDiscount = scanner.getDouble("Inserir o novo valor unitário de desconto: (%)");
 			updateProduct.setUnitDiscount(newUnitDiscount);
 
 			Double newIva = scanner.getDouble("Inserir o novo IVA (6% / 13% / 23%):");
 			updateProduct.setIva(newIva);
 			System.out.println();
-			Double newProductPrice = scanner.getDouble("Inserir o novo preço de venda ao público:");
+			Double newProductPrice = scanner.getDouble("Inserir o novo preço de venda ao público (€):");
 			updateProduct.setPublicPrice(newProductPrice);
 		} else {
 			System.out.println("Id inválido");

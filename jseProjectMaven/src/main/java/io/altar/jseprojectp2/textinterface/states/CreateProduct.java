@@ -15,7 +15,7 @@ public class CreateProduct extends State {
 	@Override
 	public int on() {
 
-		// Quando introduzo 123 passa logo para o valor unitário desconto.
+		
 		while (true) {
 			System.out.println("Insira o novo produto:");
 			productName = scanner.getValue();
@@ -45,7 +45,7 @@ public class CreateProduct extends State {
 			}
 
 		}
-// Como criar uma expecção quando o preço for 0 o programa rebenta.
+
 			while (true) {
 			publicPrice = scanner.getDouble("Insira o preço de venda ao público (>=0):");
 

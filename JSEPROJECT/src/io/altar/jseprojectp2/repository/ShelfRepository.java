@@ -15,7 +15,7 @@ import io.altar.jseprojectp2.repository.interfaces.ShelfRepositoryCRUD_Interface
 		private ShelfRepository() {
 		}
 
-		public void addEntity(io.altar.jseprojectp2.model.Shelf shelf) {
+		public void addEntity(Shelf shelf) {
 			// TODO Auto-generated method stub
 			
 		}
