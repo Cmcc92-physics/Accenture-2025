@@ -1,7 +1,7 @@
 package io.altar.jseprojectp2.model;
 
 public abstract class Entity_ {
-	private int entityId;
+	private int entityId = -1;
 	
 	
 	public int getEntityId() {

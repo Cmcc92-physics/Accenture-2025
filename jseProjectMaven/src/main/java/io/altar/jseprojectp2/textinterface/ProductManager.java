@@ -107,12 +107,13 @@ public class ProductManager {
 				}
 			}
 
-			Product newProduct = new Product(productName, null, unitDiscount, iva, publicPrice);
+			Product newProduct = new Product(null, unitDiscount, iva, publicPrice); // Retirado o ProductName
 			PS.addEntity(newProduct);
 			System.out.println("Produto adicionado com sucesso!");
 
 		}
 	}
+	
 
 	// Atualiza um produto baseado no seu index
 	public void editProduct() {

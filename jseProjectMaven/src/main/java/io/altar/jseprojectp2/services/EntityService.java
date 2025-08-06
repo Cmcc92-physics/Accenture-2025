@@ -10,6 +10,7 @@ public abstract class EntityService<R extends EntityRepository<T>, T extends Ent
 
 	protected R repository;
 	
+	// Add
 	public int addEntity(T entity) {
 		return repository.addEntity(entity);
 	}
